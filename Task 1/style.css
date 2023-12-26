@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-image: url("./images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* nav bar styles */
+nav {
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+nav a:hover {
+  color: lightcoral;
+  transition: all 0.4s;
+}
+
+nav .toggle {
+  cursor: pointer;
+  display: none;
+}
+.toggle i {
+  font-size: 1.5rem;
+}
+.dropdown {
+  display: none;
+  border: 2px solid lightcoral;
+  z-index: 10;
+  background: lightcoral;
+  border-radius: 8px;
+  position: absolute;
+  right: 1rem;
+  top: 4rem;
+  overflow: hidden;
+}
+.dropdown li {
+  list-style: none;
+  padding: 1rem 3rem;
+}
+.open {
+  display: block;
+}
+
+/* laptop responsive */
+@media screen and (max-width: 1280px) {
+  nav {
+    padding: 1rem 4rem;
+  }
+}
+/* tablet responsive */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+  nav .links {
+    display: none;
+  }
+  nav .toggle {
+    display: block;
+  }
+}
+/* mobile responsive */
+@media screen and (max-width: 425px) {
+  nav {
+    padding: 1rem 1rem;
+  }
+  nav .links {
+    display: none;
+  }
+
+  nav .toggle {
+    display: block;
+  }
+}
